@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-title: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+
+    /* Paleta base: negro + amarillo Star Wars para todo lo seleccionable */
+    --color-bg: #000000;
+    --color-surface: #0f0f0f;
+    --color-border: #262626;
+    --color-text: #f2f2f2;
+    --color-text-muted: #a6a6a6;
+    --color-accent: #ffe81f;
+    --color-button-text: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--color-bg);
+}
+
+p {
+    margin: 0;
+}
+
+.page-title {
+    margin: 0 0 4px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.page-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.section-title {
+    margin: 32px 0 16px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 640px;
+    padding: 24px;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    border-top: 4px solid var(--color-accent);
+}
+
+.panel .section-title {
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 12px 24px;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-button-text);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.button:hover {
+    filter: brightness(1.15);
+}
+
+.button--secondary {
+    color: var(--color-text);
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-text);
+    outline-offset: 2px;
+}
+
+/* Oculta un elemento a la vista pero lo deja disponible para lectores de pantalla */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
