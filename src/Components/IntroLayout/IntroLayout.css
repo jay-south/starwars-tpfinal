@@ -1,0 +1,57 @@
+.intro-layout__mute {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    display: flex;
+    padding: 10px;
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.intro-layout__mute:hover,
+.intro-layout__mute:focus-visible {
+    border-color: var(--color-accent);
+}
+
+.intro-layout {
+    min-height: 100vh;
+    padding: 32px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    /* Campo de estrellas hecho solo con CSS */
+    background-image:
+        radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
+        radial-gradient(1px 1px at 70% 20%, #ffffff, transparent),
+        radial-gradient(2px 2px at 40% 80%, #ffffff, transparent),
+        radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+        radial-gradient(2px 2px at 10% 90%, #ffffff, transparent);
+    background-size: 300px 300px;
+}
+
+.intro-layout .button {
+    align-self: center;
+}
+
+.intro-layout__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+@media (min-height: 700px) {
+    .intro-layout__content {
+        min-height: 260px;
+    }
+}

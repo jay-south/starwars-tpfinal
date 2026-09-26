@@ -1,0 +1,36 @@
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid var(--color-border);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.mission-card:hover,
+.mission-card:focus-visible {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.mission-card__name {
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+
+.mission-card__meta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.mission-card__reward {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--color-accent);
+}

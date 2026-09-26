@@ -1,0 +1,9 @@
+.star-wars-logo {
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 16 / 10;
+}
+
+.star-wars-logo canvas {
+    display: block;
+}

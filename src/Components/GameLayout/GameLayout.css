@@ -1,0 +1,22 @@
+.game-layout {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.game-layout__content {
+    padding: 24px 16px 48px;
+}
+
+/* En pantallas grandes: sidebar a la izquierda, contenido a la derecha */
+@media (min-width: 800px) {
+    .game-layout {
+        display: flex;
+    }
+
+    .game-layout__content {
+        flex: 1;
+        min-width: 0;
+        padding: 32px;
+    }
+}

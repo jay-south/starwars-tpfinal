@@ -1,0 +1,48 @@
+.troop-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    text-align: left;
+    font: inherit;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.troop-card:hover,
+.troop-card:focus-visible {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.troop-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.troop-card__icon {
+    flex-shrink: 0;
+    color: var(--color-accent);
+}
+
+.troop-card__name {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+
+.troop-card__stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}

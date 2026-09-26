@@ -1,0 +1,39 @@
+.planet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+    text-align: center;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid var(--color-border);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.planet-card:hover,
+.planet-card:focus-visible {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.planet-card__image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    /* Recorta la imagen en círculo sin deformarla */
+    object-fit: cover;
+}
+
+.planet-card__name {
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.planet-card__owner {
+    color: var(--color-text-muted);
+}
