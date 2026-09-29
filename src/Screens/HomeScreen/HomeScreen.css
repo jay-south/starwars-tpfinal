@@ -1,0 +1,11 @@
+.home__title {
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    color: var(--color-accent);
+}
+
+.home__intro {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
